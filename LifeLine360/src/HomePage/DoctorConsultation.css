@@ -1,0 +1,29 @@
+ 
+.doctor-page {
+    padding: 2rem;
+    background-color: #f9fafb;
+    display: flex;
+
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: #4a5568;
+  }
+  
+  .doctor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
