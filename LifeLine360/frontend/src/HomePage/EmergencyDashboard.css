@@ -1,0 +1,151 @@
+/* .emergency-page {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #d62828;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .emergency-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .emergency-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .emergency-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .emergency-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .emergency-info {
+    padding: 1rem;
+  }
+  
+  .emergency-info h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .emergency-info p {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  .call-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #d62828;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .call-btn:hover {
+    background-color: #a71d2a;
+  }
+     */
+
+     .emergency-page {
+      width: 100vw;
+      min-height: 100vh;
+      padding: 2vw 2vw;
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 30px 0;
+      background-color: #dc3545;
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 2vw;
+    }
+    
+    .emergency-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    
+    .emergency-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .emergency-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    
+    .emergency-info {
+      padding: 15px;
+    }
+    
+    .emergency-info h3 {
+      margin-bottom: 10px;
+    }
+    
+    .call-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #28a745;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .call-btn:hover {
+      background-color: #218838;
+    }
+    
+    @media (max-width: 600px) {
+      .emergency-page {
+        padding: 4vw 1vw;
+      }
+      .emergency-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+         

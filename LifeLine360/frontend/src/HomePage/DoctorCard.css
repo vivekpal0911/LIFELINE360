@@ -1,0 +1,44 @@
+.doctor-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 28px 20px 20px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .doctor-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-card button {
+    background-color: #2f855a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .doctor-card button:hover {
+    background-color: #276749;
+  }
+
+  .doctor-icon {
+    margin-bottom: 16px;
+  }

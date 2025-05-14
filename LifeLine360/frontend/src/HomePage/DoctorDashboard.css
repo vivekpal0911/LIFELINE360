@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+  }
+  
+  .doctor-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+  }
+  
+  /* Sidebar */
+  .doctor-sidebar {
+    width: 220px;
+    min-width: 180px;
+    background-color: #0077b6;
+    color: white;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  .doctor-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .doctor-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .doctor-sidebar li {
+    margin: 12px 0;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .doctor-sidebar li:hover {
+    color: #90e0ef;
+  }
+  
+  /* Main Content */
+  .doctor-main {
+    flex: 1;
+    padding: 2vw 2vw;
+    background-color: #f0f8ff;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .doctor-main h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #023e8a;
+  }
+  
+  /* Appointments Table */
+  .appointment-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  .appointment-table th, .appointment-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  .appointment-table th {
+    background-color: #0077b6;
+    color: white;
+  }
+  .appointment-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Button */
+  .prescription-btn {
+    padding: 8px 14px;
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .prescription-btn:hover {
+    background-color: #0077b6;
+  }
+
+  .appointment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .appointment-card {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .appointment-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .appointment-filter {
+    margin-bottom: 1rem;
+  }
+  .doctor-dashboard-welcome {
+    margin-bottom: 2rem;
+  }
+  
+  .doctor-dashboard-welcome h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dashboard-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .stat-card {
+    background-color: #eef4ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex: 1 1 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .stat-card h2 {
+    font-size: 2rem;
+    color: #3a7bfd;
+    margin: 0;
+  }
+  
+  .stat-card p {
+    margin: 0.5rem 0 0;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  @media (max-width: 900px) {
+    .doctor-container {
+      flex-direction: column;
+    }
+    .doctor-sidebar {
+      width: 100vw;
+      min-width: unset;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .doctor-main {
+      padding: 4vw 2vw;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .doctor-container {
+      flex-direction: column;
+    }
+    .doctor-sidebar {
+      width: 100vw;
+      padding: 8px 0;
+      font-size: 1rem;
+    }
+    .doctor-main {
+      padding: 2vw 1vw;
+    }
+    .dashboard-stats {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

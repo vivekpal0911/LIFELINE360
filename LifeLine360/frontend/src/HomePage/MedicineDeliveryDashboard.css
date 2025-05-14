@@ -1,0 +1,88 @@
+.delivery-container {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2vw 2vw;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    border-radius: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .delivery-container h1 {
+    color: #0077b6;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .delivery-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .delivery-card {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+  
+  .delivery-card h2 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  
+  .delivery-card p {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+  
+  .delivery-card .Pending {
+    color: #f57c00;
+    font-weight: bold;
+  }
+  
+  .delivery-card .Out\ for\ Delivery {
+    color: #1976d2;
+    font-weight: bold;
+  }
+  
+  .delivery-card .Delivered {
+    color: #388e3c;
+    font-weight: bold;
+  }
+  
+  .delivery-card button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background-color: #0288d1;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .delivery-card button:hover {
+    background-color: #01579b;
+  }
+  
+  .delivered-icon {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .delivery-container {
+      padding: 4vw 1vw;
+    }
+    .delivery-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

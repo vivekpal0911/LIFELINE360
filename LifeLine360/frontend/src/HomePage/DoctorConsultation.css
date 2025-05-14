@@ -1,0 +1,63 @@
+.doctor-page {
+    padding: 32px 0 40px 0;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+@media (max-width: 900px) {
+    .hero, .doctor-list {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .doctor-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .hero {
+        padding: 24px 4vw 16px 4vw;
+    }
+} 
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    background: linear-gradient(90deg, #e3f6fc 0%, #c9eafc 100%);
+    border-radius: 16px;
+    padding: 32px 2vw 24px 2vw;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a237e;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+.doctor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 36px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw 40px 2vw;
+    box-sizing: border-box;
+    justify-items: center;
+} 

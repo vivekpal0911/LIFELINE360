@@ -1,0 +1,119 @@
+.med-container {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2vw 2vw;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+  
+  .med-container h1 {
+    text-align: center;
+    color: #023e8a;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .medicine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .medicine-item {
+    padding: 15px;
+    background-color: #e0f7fa;
+    border: 1px solid #90e0ef;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: #023e8a;
+  }
+  
+  .medicine-item button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .medicine-item button:hover {
+    background-color: #023e8a;
+  }
+  
+  .cart {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .cart h2 {
+    color: #0077b6;
+  }
+  
+  .cart ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .order-btn {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .order-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 600px) {
+    .med-container {
+      padding: 4vw 1vw;
+    }
+    .medicine-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.admin-dashboard {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+.admin-exit-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  padding: 8px 16px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 4vw 1vw;
+  }
+}

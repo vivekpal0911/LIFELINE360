@@ -1,0 +1,124 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #caf0f8, #edf6f9);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .auth-bg {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #e0f7fa 0%, #f9f9f9 100%);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .auth-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 38px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 370px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tabs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 28px;
+    gap: 0;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #222;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .tabs button.active {
+    color: #fff;
+    background: #0077b6;
+    box-shadow: 0 2px 8px rgba(0,119,182,0.08);
+  }
+  
+  .tab-underline {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 4px;
+    height: 4px;
+    background: linear-gradient(90deg, #0077b6 60%, #90e0ef 100%);
+    z-index: 2;
+  }
+  
+  .auth-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .auth-form input,
+  .auth-form select {
+    padding: 12px 14px;
+    border: 1.5px solid #b5d6e6;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f9f9f9;
+  }
+  
+  .auth-form input:focus,
+  .auth-form select:focus {
+    border: 1.5px solid #0077b6;
+    background: #fff;
+  }
+  
+  .submit-btn {
+    background: #0077b6;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,119,182,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background: #023e8a;
+    box-shadow: 0 4px 16px rgba(0,119,182,0.12);
+  }
+
+  @media (max-width: 600px) {
+    .auth-card {
+      min-width: unset;
+      max-width: 98vw;
+      padding: 18px 4vw 18px 4vw;
+    }
+  }
