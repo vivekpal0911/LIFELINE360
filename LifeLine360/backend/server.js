@@ -9,10 +9,9 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
+    'https://lifeline360-1.onrender.com', // Deployed frontend
     'http://localhost:5173', // Local dev
-    'https://e360-1.onrender.com', // Your deployed frontend URL
-    'capacitor://localhost', // For mobile hybrid apps (optional)
-    'http://localhost' // For mobile browser testing
+    'http://localhost'
   ],
   credentials: true
 }));
