@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './LabBooking.css'; // Assuming you're using this for styling
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState('medicine');
@@ -13,7 +15,7 @@ const AdminDashboard = () => {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/admin')
+    axios.get(`${apiUrl}/api/admin`)
       .then(res => setData(res.data))
       .catch(err => console.error('Error fetching admin data:', err));
   }, []);

@@ -3,42 +3,55 @@
   align-items: center;
   justify-content: space-between;
   background: #0684c7;
-  padding: 0 40px;
-  height: 80px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0 24px;
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 0 0 18px 18px;
+  position: relative;
+  z-index: 100;
+  transition: height 0.2s, padding 0.2s;
 }
 
 .navbar img {
-  height: 60px;
+  height: 44px;
+  width: 44px;
   background: #fff;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 10px;
+  transition: height 0.2s, width 0.2s;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
-  margin-right: 40px;
+  margin-right: 18px;
+  letter-spacing: 1px;
+  transition: font-size 0.2s;
 }
 
 .navbar nav {
   display: flex;
-  gap: 32px;
+  gap: 18px;
   flex: 1;
   justify-content: center;
+  align-items: center;
+  transition: gap 0.2s;
 }
 
 .navbar nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.2s;
+  padding: 6px 0;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
 }
 
 .navbar nav a:hover {
   color: #ffd700;
+  background: rgba(255,255,255,0.08);
 }
 
 .nav-buttons {
@@ -47,12 +60,12 @@
 }
 
 .btn-outline {
-  padding: 8px 24px;
+  padding: 6px 16px;
   border: 2px solid #fff;
   background: transparent;
   color: #fff;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
@@ -63,42 +76,86 @@
   color: #0684c7;
 }
 
+/* Hamburger menu button for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  z-index: 110;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
     height: auto;
-    padding: 16px;
+    padding: 10px 8px 8px 8px;
+    border-radius: 0 0 14px 14px;
   }
-  .navbar nav {
-    gap: 16px;
-    margin: 12px 0;
+  .navbar img {
+    height: 36px;
+    width: 36px;
+    margin-bottom: 2px;
   }
   .logo {
+    font-size: 1.1rem;
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  .navbar nav {
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0 0 0;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .navbar nav a {
+    font-size: 0.98rem;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
   }
   .nav-buttons {
-    margin-top: 8px;
+    margin-top: 6px;
+  }
+  .btn-outline {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+  .navbar nav,
+  .nav-buttons {
+    display: none;
+  }
+  .navbar.open nav,
+  .navbar.open .nav-buttons {
+    display: flex;
   }
 }
 
-@media (max-width: 800px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 16px 8px;
-  }
-  .navbar nav {
-    flex-direction: column;
-    gap: 12px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-  .nav-buttons {
-    margin-top: 10px;
-  }
-  .logo {
-    margin-bottom: 8px;
+@media (min-width: 901px) {
+  .hamburger {
+    display: none;
   }
 } 

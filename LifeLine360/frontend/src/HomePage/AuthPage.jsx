@@ -16,6 +16,8 @@ export default function AuthPage() {
     role: ''
   });
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,8 +29,8 @@ export default function AuthPage() {
     // Remove default appointments, prescriptions, and history for patient registration
   
     const url = isLogin
-      ? 'http://localhost:5000/api/login'
-      : 'http://localhost:5000/api/register';
+      ? `${apiUrl}/api/login`
+      : `${apiUrl}/api/register`;
   
     try {
       const { data } = await axios.post(url, submitData);

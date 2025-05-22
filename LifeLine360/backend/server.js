@@ -7,13 +7,21 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // Local dev
+    'https://e360-1.onrender.com', // Your deployed frontend URL
+    'capacitor://localhost', // For mobile hybrid apps (optional)
+    'http://localhost' // For mobile browser testing
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ msg: 'Something went wrong!' });
+  res.status(500).json({ msg: 'Something went wrong!', error: err.message, stack: err.stack });
 });
 
 // Connect to MongoDB

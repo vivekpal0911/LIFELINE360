@@ -237,20 +237,51 @@ body {
     max-width: 100%;
     padding: 16px 8px;
   }
-  .services {
-    padding: 12vw 2vw;
-    grid-template-columns: 1fr;
+  .services, .highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+    box-sizing: border-box;
   }
-  .service-card {
-    min-width: unset;
-    max-width: 100%;
-    padding: 16px 8px;
+  .service-card, .highlight-card {
+    width: calc(100vw - 24px);
+    min-width: 0;
+    max-width: 500px;
+    margin: 0 0 12px 0;
+    box-sizing: border-box;
+  }
+  .service-card h3 {
+    font-size: 1.08rem;
+    margin: 8px 0 4px 0;
+  }
+  .service-card p {
+    font-size: 0.97rem;
   }
   .testimonial {
     padding: 8vw 2vw;
   }
   .footer {
     padding: 8vw 2vw;
+  }
+  .hero-split {
+    border-radius: 0 0 18px 18px;
+    overflow: hidden;
+    padding: 4vw 0 0 0;
+    box-sizing: border-box;
+  }
+  .hero-doctor-img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    margin: 12px auto 0 auto;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    object-fit: cover;
+    background: none;
   }
 }
 
