@@ -37,8 +37,9 @@ export default function AuthPage() {
       alert(data.msg);
       if (isLogin) {
         const role = data.role;
-        // Save email to localStorage (use backend response)
+        // Save email and role to localStorage (use backend response)
         localStorage.setItem('userEmail', data.email);
+        localStorage.setItem('userRole', role);
         const redirectPath = localStorage.getItem('redirectAfterLogin');
         if (redirectPath) {
           navigate(redirectPath);

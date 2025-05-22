@@ -35,20 +35,20 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/login" element={<AuthPage />} />
         <Route path="/patient-status" element={<PatientStatus />} />
-        <Route path="/doctor" element={<DoctorDashboard />} />
-        <Route path="/doctor-card" element={<DoctorCard />} />
-        <Route path="/pharmacist-dashboard" element={<PharmacistDashboard />} />
-        <Route path="/medicine-delivery" element={<MedicineDeliveryDashboard />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/lab-booking" element={<LabBooking />} />
-        <Route path="/medicine-ordering" element={<MedicineOrdering />} />
-        <Route path="/sample-collection" element={<SampleCollection />} />
-        <Route path="/delivery-animation" element={<DeliveryAnimation />} />
-        <Route path="/consultant" element={<ProtectedRoute><DoctorConsultation /></ProtectedRoute>} />
-        <Route path="/emergency-dashboard" element={<EmergencyDashboard />} />
-        <Route path="/my-reports" element={<MyReports />} />
+        <Route path="/doctor" element={<ProtectedRoute role="doctor"><DoctorDashboard /></ProtectedRoute>} />
+        <Route path="/doctor-card" element={<ProtectedRoute role="doctor"><DoctorCard /></ProtectedRoute>} />
+        <Route path="/pharmacist-dashboard" element={<ProtectedRoute role="pharmacist"><PharmacistDashboard /></ProtectedRoute>} />
+        <Route path="/medicine-delivery" element={<ProtectedRoute role="delivery"><MedicineDeliveryDashboard /></ProtectedRoute>} />
+        <Route path="/admin-dashboard" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
+        <Route path="/lab-booking" element={<ProtectedRoute role="patient"><LabBooking /></ProtectedRoute>} />
+        <Route path="/medicine-ordering" element={<ProtectedRoute role="patient"><MedicineOrdering /></ProtectedRoute>} />
+        <Route path="/sample-collection" element={<ProtectedRoute role="patient"><SampleCollection /></ProtectedRoute>} />
+        <Route path="/delivery-animation" element={<ProtectedRoute role="delivery"><DeliveryAnimation /></ProtectedRoute>} />
+        <Route path="/consultant" element={<ProtectedRoute role="doctor"><DoctorConsultation /></ProtectedRoute>} />
+        <Route path="/emergency-dashboard" element={<ProtectedRoute role="patient"><EmergencyDashboard /></ProtectedRoute>} />
+        <Route path="/my-reports" element={<ProtectedRoute role="patient"><MyReports /></ProtectedRoute>} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/patient-dashboard" element={<PatientDashboard />} />
+        <Route path="/patient-dashboard" element={<ProtectedRoute role="patient"><PatientDashboard /></ProtectedRoute>} />
         {/* Add more routes here as needed */}
       </Routes>
       <Footer />

@@ -1,3 +1,17 @@
+/* Remove dark mode and CSS variable code, restore to original styles */
+
+body, .auth-bg, .doctor-main, .doctor-container, .doctor-sidebar, .card, .stat-card, .appointment-card {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+.doctor-sidebar {
+  background: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+}
+.card, .stat-card, .appointment-card {
+  background: var(--card-bg) !important;
+}
+
 #root {
   width: 100vw;
   min-height: 100vh;
@@ -39,4 +53,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+header, .navbar {
+  background: var(--navbar-bg) !important;
 }

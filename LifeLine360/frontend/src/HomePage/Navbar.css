@@ -76,7 +76,6 @@
   color: #0684c7;
 }
 
-/* Hamburger menu button for mobile */
 .hamburger {
   display: none;
   flex-direction: column;

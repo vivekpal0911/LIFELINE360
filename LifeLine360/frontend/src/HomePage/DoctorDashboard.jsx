@@ -32,7 +32,9 @@ const filteredAppointments = appointments.filter((appt) => {
   };
 
   const handleLogout = () =>{
-    navigate('/');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userRole');
+    navigate('/auth');
   }
   const renderDashboard = location.pathname ==="/doctor";
 
